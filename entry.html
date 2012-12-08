@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<html>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<head>
+<title>The Game</title>
+<script type="text/javascript" src="Physical.js"></script>
+<script type="text/javascript" src="helper.js"></script>
+<script type="text/javascript">
+function onload_handler() {
+	$("control").style.display = "block";
+	$("canvas").style.display = "block";
+	$("width").innerHTML = "0";
+	$("height").innerHTML = "0";
+	Game.init();
+}
+</script>
+</head>
+<body onload="onload_handler()">
+<div id="control">
+<button id="stst" title="Start" onclick="Game.start(); return false">Start</button>
+</div>
+<div id="console">
+<table style="border:none; display:inline-block">
+	<tr>
+		<td style="text-align:right;">Width:</td>
+		<td style="text-align:left; font-weight:bold" id="width"></td>
+	</tr>
+	<tr>
+		<td style="text-align:right;">Heigth:</td>
+		<td style="text-align:left; font-weight:bold" id="height"></td>
+	</tr>
+</table>
+</div>
+<div id="canvas">
+<canvas id="surface"></canvas>
+</div>
+</body>
+</html>
